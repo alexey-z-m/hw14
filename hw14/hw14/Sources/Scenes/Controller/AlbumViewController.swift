@@ -14,7 +14,7 @@ class AlbumViewController: UIViewController {
     }
     
     func setupView() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         title = "Albums"
     }
     

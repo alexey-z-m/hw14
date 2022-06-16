@@ -14,7 +14,6 @@ class SharedAlbumsCollectionViewCell: UICollectionViewCell {
     private let labelNameAlbum: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
-        label.textColor = .black
         label.font = .systemFont(ofSize: 15, weight: .regular)
         return label
     }()
