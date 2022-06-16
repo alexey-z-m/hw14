@@ -27,7 +27,7 @@ class AlbumCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    public func configure(with model: AlbumType) {
+    public func configure(with model: Item) {
         imageView.image = model.image
         labelNameAlbum.text = model.title
         labelCountPhotoInAlbum.text = model.countPhoto
