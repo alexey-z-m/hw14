@@ -1,5 +1,6 @@
 import UIKit
 import SnapKit
+
 class AlbumViewController: UIViewController {
     static let identifier = "AlbumViewController"
     
@@ -10,7 +11,7 @@ class AlbumViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         configureCollectionView()
-        configureDataSourse()
+        configureDataSource()
     }
     
     func setupView() {
@@ -145,11 +146,13 @@ class AlbumViewController: UIViewController {
         }
         return layout
     }
-    
-    func configureDataSourse() {
+}
+
+extension AlbumViewController {
+    func configureDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section,Item>(
             collectionView: mainCollectionView) {(
-                colectionView: UICollectionView,
+                collectionView: UICollectionView,
                 indexPath: IndexPath,
                 item: Item) -> UICollectionViewCell? in
                 let sectionType = Section.allCases[indexPath.section]
